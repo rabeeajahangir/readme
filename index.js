@@ -91,28 +91,23 @@ const questions = [
     }
 ];
 
+
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
-promptUser()
-  .then(promptProject)
-  .then(portfolioData => {
-    return generatePage(portfolioData);
-  })
-  .then(pageHTML => {
-    return writeFile(pageHTML);
-  })
-  .then(writeFileResponse => {
-    console.log(writeFileResponse);
-    return copyFile();
-  })
-  .then(copyFileResponse => {
-    console.log(copyFileResponse);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-// // TODO: Create a function to initialize app
-// function init() {}
 
-// // Function call to initialize app
-// init();
+// TODO: Create a function to initialize app
+function init() {
+    inquirer
+        .prompt(questions)
+        .then(data => {
+            console.log(data);
+            console.log('Generating README file');
+            //says write file, pull data from markdown, inport data
+            //was not originally working bc writefileasync was not defined at top, keep eye out
+            writeFileAsync('README.md', generateMarkdown(data))
+        })
+
+}
+
+// Function call to initialize app
+init();
