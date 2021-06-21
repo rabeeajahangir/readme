@@ -14,6 +14,9 @@
  Install node on your system and then clone this repository from the github.com/rabeeajahangir/readme.
 ## Usage
  Follow the step by step questions to develop a readme.
+ 
+https://user-images.githubusercontent.com/69980221/122703580-eef84800-d21f-11eb-97bb-d2a5ba63d7ce.mp4
+
 ## License
  MIT
  (https://choosealicense.com/licenses/mit/)
